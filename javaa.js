@@ -3,6 +3,7 @@ const next = document.querySelector('#next-button');
 const last = document.querySelector('#last-button');
 const trackImage = document.querySelector('.music-cover');
 const trackTitle = document.querySelector('.music-h2');
+const trackArtlist = document.querySelector('.music-p');
 const audio = new Audio();
 
 const volumeSlider = document.querySelector('#volume-slider');
@@ -28,6 +29,8 @@ function loadTrack(index) {
     durationDisplay.textContent = formatTime(audio.duration);
     trackTitle.textContent = playlist[index].title;
     trackImage.src = playlist[index].image; 
+    trackArtlist.textContent = playlist[index].artlist;
+    
 }
 
 let currentTrackIndex = 0;   
